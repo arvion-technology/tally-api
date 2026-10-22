@@ -1,0 +1,75 @@
+<!doctype html>
+<html lang="en" class="theme-citrus">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <meta name="color-scheme" content="light" />
+  <title>Tally | Expense API on the JDK HTTP server</title>
+  <meta
+    name="description"
+    content="A small expense API written in plain Java 17 on the JDK HTTP server. Submit, approve and report expenses with no framework and no build tool. The browser page is a faithful mirror of the Java endpoints."
+  />
+  <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'><rect width='32' height='32' rx='8' fill='%23d9631e'/><text x='16' y='23' font-family='Georgia,serif' font-size='19' font-weight='700' fill='%23fff8ee' text-anchor='middle'>T</text></svg>" />
+  <link rel="stylesheet" href="arvion.css" />
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+  <div class="aurora"></div>
+  <div class="grid-lines"></div>
+
+  <div class="app shell api-shell">
+    <aside class="sidebar api-sidebar" aria-label="API endpoints">
+      <a class="brand api-brand" href="./index.html">
+        <span class="brand-mark" aria-hidden="true">T</span>
+        <span>
+          <span class="brand-word">TALLY</span>
+          <span class="brand-sub" style="display: block">Expense API</span>
+        </span>
+      </a>
+
+      <div id="endpoint-nav"></div>
+
+      <div class="sidebar-spacer"></div>
+      <div class="server-card">
+        <div class="server-label">Run the real service</div>
+        <code class="server-command">bash scripts/run.sh</code>
+        <div class="server-note">Java 17+. No framework. Binds to 127.0.0.1:8080.</div>
+      </div>
+      <a class="sidebar-link" href="https://github.com/arvion-technology/tally-api#readme" target="_blank" rel="noopener">
+        Source and README <span aria-hidden="true">↗</span>
+      </a>
+    </aside>
+
+    <div class="workspace">
+      <header class="topbar api-topbar">
+        <div class="api-badges">
+          <span class="badge">JDK 17+</span>
+          <span class="badge gold">no framework</span>
+          <span class="badge">in-memory</span>
+        </div>
+        <span class="spacer"></span>
+        <div class="tabs" id="view-tabs" role="tablist" aria-label="Views">
+          <button class="tab active" type="button" data-view="console" role="tab">Console</button>
+          <button class="tab" type="button" data-view="reports" role="tab">Reports</button>
+        </div>
+        <button class="btn sm" type="button" data-action="reset">Reset sample data</button>
+        <a class="btn primary sm" href="https://github.com/arvion-technology/tally-api" target="_blank" rel="noopener">Source</a>
+      </header>
+
+      <main class="api-main" id="main"></main>
+    </div>
+  </div>
+
+  <div class="demo-banner">
+    <span class="brand-mark" style="width: 20px; height: 20px; font-size: 10px; border-radius: 6px">A</span>
+    <span>Arvion Labs</span>
+    <span class="sep"></span>
+    <a href="https://arvion-technology.github.io/labs/">All projects</a>
+    <span class="sep"></span>
+    <a href="https://github.com/arvion-technology/tally-api" target="_blank" rel="noopener">source</a>
+  </div>
+
+  <script src="arvion.js"></script>
+  <script type="module" src="app.js"></script>
+</body>
+</html>
