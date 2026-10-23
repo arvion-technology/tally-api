@@ -1,0 +1,11 @@
+[
+  { "wait": 1500 },
+  { "click": "#view-tabs button[data-view=\"reports\"]" },
+  { "wait": 1600 },
+  { "click": "#view-tabs button[data-view=\"console\"]" },
+  { "wait": 1000 },
+  { "click": "[data-action=\"reset\"]" },
+  { "wait": 900 },
+  { "click": "#endpoint-nav button:nth-child(2)" },
+  { "wait": 1300 }
+]
